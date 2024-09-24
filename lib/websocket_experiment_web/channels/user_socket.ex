@@ -18,7 +18,7 @@ defmodule WebsocketExperimentWeb.UserSocket do
   #
   # See the [`Channels guide`](https://hexdocs.pm/phoenix/channels.html)
   # for further details.
-
+  channel "room:lobby", WebsocketExperimentWeb.RoomChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
