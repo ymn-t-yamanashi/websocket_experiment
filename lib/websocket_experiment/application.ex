@@ -9,7 +9,8 @@ defmodule WebsocketExperiment.Application do
   def start(_type, _args) do
     children = [
       WebsocketExperimentWeb.Telemetry,
-      {DNSCluster, query: Application.get_env(:websocket_experiment, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:websocket_experiment, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: WebsocketExperiment.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: WebsocketExperiment.Finch},
