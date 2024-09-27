@@ -19,7 +19,17 @@
     // 20:08:11.166
     // [null,"7","phoenix","heartbeat",{}]	35	
     // 20:08:41.167
-    // [null,"7","phoenix","phx_reply",{"status":"ok","response":{}}]
+    
+    
+    // 12345678901234567890+
+    // move                +
+    // Box                 +  
+    // 1                   +
+    // 2                   +
+    // 3                   +
+    // 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890+
+    // move                Box                 1                   2                   3                   +
+    // [null,null,"room:lobby","new_msg",{"body":"move                Box                 1                   2                   3                   "}]
 
     const ws = new WebSocket('ws://localhost:4000/socket/websocket?token=undefined&vsn=2.0.0')
 
