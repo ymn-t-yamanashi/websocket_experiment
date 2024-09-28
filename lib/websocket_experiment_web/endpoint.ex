@@ -16,7 +16,9 @@ defmodule WebsocketExperimentWeb.Endpoint do
     longpoll: [connect_info: [session: @session_options]]
 
   socket "/socket", WebsocketExperimentWeb.UserSocket,
-    websocket: true,
+    websocket: [
+      timeout: :infinity
+    ],
     longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
